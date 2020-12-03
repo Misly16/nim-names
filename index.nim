@@ -7,7 +7,7 @@ if yesorno == "y":
     echo "What name would you like to add?"
     let addname = readLine(stdin)
     echo "OK I will add ", addname, " to the list"
-    # This will overwrite anything in the names.txt file as im not sure yet on how to prevent that
-    writeFile("names.txt", addname)
+    let allnames = names & "\n" & addname
+    writeFile("names.txt", allnames)
 else:
     echo "Ok, I won't add any names"
